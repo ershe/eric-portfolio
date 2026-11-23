@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c1917" />
+      <stop offset="50%" stop-color="#292524" />
+      <stop offset="100%" stop-color="#0c0a09" />
+    </linearGradient>
+    <linearGradient id="plate" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#44403c" />
+      <stop offset="50%" stop-color="#78716c" />
+      <stop offset="100%" stop-color="#292524" />
+    </linearGradient>
+    <linearGradient id="bar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e7e5e4" />
+      <stop offset="50%" stop-color="#a8a29e" />
+      <stop offset="100%" stop-color="#57534e" />
+    </linearGradient>
+    <linearGradient id="pulse" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ea580c" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#f97316" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0.2" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.04" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg)" />
+  <rect width="800" height="500" fill="url(#grid)" />
+
+  <!-- Subtle glow center -->
+  <circle cx="400" cy="250" r="180" fill="#f97316" fill-opacity="0.06" filter="blur(40px)" />
+
+  <!-- Telemetry / Waveform Line -->
+  <path d="M 50 340 Q 150 340 220 310 T 320 280 T 400 160 T 480 300 T 580 320 T 750 340" 
+        fill="none" stroke="url(#pulse)" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Data Points -->
+  <circle cx="400" cy="160" r="5" fill="#f97316" />
+  <circle cx="400" cy="160" r="10" fill="none" stroke="#f97316" stroke-width="1" stroke-opacity="0.5" />
+  <circle cx="320" cy="280" r="4" fill="#fbbf24" />
+  <circle cx="480" cy="300" r="4" fill="#fbbf24" />
+
+  <!-- Barbell Artwork (Weightlifting) -->
+  <g transform="translate(0, -10)">
+    <!-- Central Bar -->
+    <rect x="180" y="244" width="440" height="12" rx="6" fill="url(#bar)" />
+    <!-- Center Knurling Indicators -->
+    <line x1="300" y1="244" x2="300" y2="256" stroke="#292524" stroke-width="1.5" stroke-dasharray="2,2" />
+    <line x1="500" y1="244" x2="500" y2="256" stroke="#292524" stroke-width="1.5" stroke-dasharray="2,2" />
+
+    <!-- Left Collar -->
+    <rect x="245" y="238" width="12" height="24" rx="2" fill="#78716c" />
+    <!-- Left Outer Plate -->
+    <rect x="220" y="200" width="22" height="100" rx="4" fill="url(#plate)" stroke="#1c1917" stroke-width="2" />
+    <!-- Left Big 45lb Plate -->
+    <rect x="195" y="170" width="22" height="160" rx="6" fill="#1c1917" stroke="#44403c" stroke-width="3" />
+    <circle cx="206" cy="250" r="14" fill="#292524" />
+    <text x="206" y="254" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#a8a29e" text-anchor="middle">45</text>
+
+    <!-- Right Collar -->
+    <rect x="543" y="238" width="12" height="24" rx="2" fill="#78716c" />
+    <!-- Right Outer Plate -->
+    <rect x="558" y="200" width="22" height="100" rx="4" fill="url(#plate)" stroke="#1c1917" stroke-width="2" />
+    <!-- Right Big 45lb Plate -->
+    <rect x="583" y="170" width="22" height="160" rx="6" fill="#1c1917" stroke="#44403c" stroke-width="3" />
+    <circle cx="594" cy="250" r="14" fill="#292524" />
+    <text x="594" y="254" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#a8a29e" text-anchor="middle">45</text>
+  </g>
+
+  <!-- Metric Badges in Graphic -->
+  <g transform="translate(400, 390)">
+    <rect x="-140" y="-18" width="280" height="36" rx="18" fill="#1c1917" fill-opacity="0.8" stroke="#44403c" stroke-width="1" />
+    <text x="0" y="5" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#d6d3d1" text-anchor="middle" letter-spacing="0.5">
+      BIOMECHANICS • KINEMATICS • REPS
+    </text>
+  </g>
+</svg>
